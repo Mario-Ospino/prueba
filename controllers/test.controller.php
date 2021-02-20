@@ -1,7 +1,7 @@
 <?php
 
 class ctrTest{
-    function showViewTest(){
+    public static function showViewTest(){
         include "views/test.php";
     }
 }
