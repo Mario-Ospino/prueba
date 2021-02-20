@@ -5,12 +5,17 @@ class ctrLogin{
         require 'models/login.php';
 
             $respLogin = loginApp();
-            //iniciamos sesion
-            session_start();
-            $_SESSION['sessionName'] = "$respLogin";
-            if(!isset($_SESSION['sessionName'])){
-                echo 'no se pudo iniciar session';
+            if(!$respLogin){
+                echo "error al loguearse";
+            }else{
+                //iniciamos sesion
+                session_start();
+                $_SESSION['sessionName'] = "$respLogin";
+                if(!isset($_SESSION['sessionName'])){
+                    echo 'no se pudo iniciar session storage';
+                }
             }
+           
        } 
     }
     ?>

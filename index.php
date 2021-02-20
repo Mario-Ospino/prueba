@@ -10,4 +10,3 @@ require_once 'controllers/queriesApi.controller.php';
 $test =  ctrTest :: showViewTest();
 $login =  ctrLogin :: login();
 $queriesApi = ctrQueriesApi :: queriesGetConstacts();
-echo "Mostrando los contactos desde index.php $queriesApi";
