@@ -4,7 +4,6 @@ $.ajax({
     success: function (response){
         console.log("response",response);
         let contacts = JSON.parse(response);
-        console.log("lo que tiene contacts",contacts);
         let template = '';
         contacts.forEach(contact => {
             template += `
