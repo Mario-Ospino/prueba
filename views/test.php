@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="col-md-2">
-    <button>CARGAR</button>
+    <button onclick="LoadContacts()">CARGAR</button>
     </div>
     <div class="col-md-12">
         <table class="table table-bordered table-sm">

@@ -33,7 +33,6 @@ require('vendor/autoload.php');
         $token = getToken();
         $apikey = getApiKey();
         $accessKey = md5($token.$apikey);
-       // echo "  -- token: $token  api: $apikey md5: $accessKey";
         return $accessKey;
     }
 

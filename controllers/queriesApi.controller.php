@@ -20,20 +20,16 @@ class ctrQueriesApi{
 }
 */
 
-
-
 require('../models/queriesApi.php');
     session_start();
     if(!isset($_SESSION['sessionName'])){
        //no estoy logueado, no tengo variable de session
-        $sessionName = '';
-        $contacts = '';
+        echo "Error al obtener variable de session";
     }else{
          //obtengo variable de session   
         $sessionName = $_SESSION['sessionName'];
         $contacts = getfakedata();
+        //$contacts = CurlgetApiContacts($sessionName);
+        echo $contacts;
     }
-    //retorno los datos de contacto;
-    echo $contacts;
-
 ?>

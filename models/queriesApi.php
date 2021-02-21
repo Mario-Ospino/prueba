@@ -1,25 +1,10 @@
 <?php
-    function getApiContacts($sessionName){    
-        define('URLGETCONTACTS',"https://develop.datacrm.la/datacrm/pruebatecnica/webservice.php?operation=query&sessionName=$sessionName&query=select*fromContacts;");
-        $dataContacts = file_get_contents(URLGETCONTACTS);
-        if($dataContacts){
-            echo "$dataContacts";
-            return $dataContacts;
-        }else{
-            echo "error al  obtener contactos";
-            return $dataContacts;
-        }
-    }
-
-
+   
     function CurlgetApiContacts($sessionName){
-
         //definimos algunas variables
-        define('URLAPI',"https://develop.datacrm.la/datacrm/pruebatecnica/webservice.php");
-        $operation = 'query';
-        $query = 'SELECT*FROMContacts;';
-        $params = "operation=$operation&sessionName=$sessionName&query=$query";
-
+        define('URLAPI','https://develop.datacrm.la/datacrm/pruebatecnica/webservice.php');
+        $params = "operation=query&sessionName=$sessionName&query=select*from Contacts;";
+       
         //abrimos la sesion cURL
         $conection = curl_init();
 
@@ -38,7 +23,6 @@
 
         //cerramos la sesion
         curl_close($conection);
-
         return $remote_server_output;
         
     }
